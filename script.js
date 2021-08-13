@@ -17,6 +17,8 @@ function playerSelection() {
     const playerSelection = prompt('Rock, paper or scissors?').toLowerCase();
     return playerSelection; 
 }
+
+/*initialize userScore and computerScore before the function*/
 let userScore = 0;
 let computerScore = 0;
 
@@ -62,6 +64,8 @@ function game() {
     console.log(playRound(playerSelection(),computerPlay()));
     console.log(playRound(playerSelection(),computerPlay()));
     console.log(playRound(playerSelection(),computerPlay()));
+    /*console.log above and keep score tallied with each runthrough of playRound*/
+    /*code below should compute who the winner or loser is and how many points they won by*/
     if (userScore > computerScore) {
         console.log('You won by ' + (userScore - computerScore) + ' points!');
     } else if (userScore < computerScore) {
