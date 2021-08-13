@@ -17,53 +17,58 @@ function playerSelection() {
     const playerSelection = prompt('Rock, paper or scissors?').toLowerCase();
     return playerSelection; 
 }
+let userScore = 0;
+let computerScore = 0;
 
 /* one single round playing in the terminal */
 function playRound(playerSelection, computerPlay) {
     if(playerSelection == 'rock' && computerPlay == 'scissors'){
-        return 'You Won!';
+        console.log('You Won! Rock beats scissors, you get a point');
+        userScore++;
     } else if (playerSelection == 'rock' && computerPlay == 'paper') {
-        return 'You lost!';
+        console.log('You lost! Paper beats rock, computer gets a point!');
+        computerScore++; 
     } else if (playerSelection == 'rock' && computerPlay == 'rock') {
-        return "It's a tie!";
+        console.log("Rock on Rock! Nobody gets a point!"); 
     } else if (playerSelection == 'paper' && computerPlay == 'rock') {
-        return 'You Won!';
+        console.log('You Won! Paper beats rock, you get a point!');
+        userScore++;
     } else if (playerSelection == 'paper' && computerPlay == 'scissors') {
-        return 'You lost!';
+        console.log('You lost! Scissors beats paper, computer gets a point!');
+        computerScore++; 
     } else if (playerSelection == 'paper' && computerPlay == 'paper') {
-        return "It's a tie!";
+        console.log("Paper on paper! Nobody gets a point!");
     } else if (playerSelection == 'scissors' && computerPlay == 'paper') {
-        return 'You Won!'
+        console.log('You Won! Scissors beats paper, you get a point!');
+        userScore++;
     } else if (playerSelection == 'scissors' && computerPlay == 'rock') {
-        return 'You lost!';
+        console.log('You lost! Rock beats scissors, computer gets a point!');
+        computerScore++;
     } else if (playerSelection == 'scissors' && computerPlay == 'scissors') {
-        return "It's a tie!";
+        console.log("Scissoring?? Nobody gets a point!");
     } else {
-        return 'Something went wrong';
+        console.log('Something went wrong');
     }
+    return 'Your points: ' + userScore + ' Computers Points: ' + computerScore;
+    
 }
 
 /* trying to make one that'll keep score and go up to 5 games.*/
 
-let userScore = 0;
-let computerScore = 0;
 
 function game() { 
-    console.log(playRound(playerSelection(),computerPlay())); {
-        if ('You Won!') {
-            console.log('You get a point!');
-            userScore++; 
-            console.log('Your Points: '+ userScore + 'Computer Points: '+ computerScore);
-        } else if ('You lost!') {
-            console.log('Computer gets a point!');
-            computerScore++;
-            console.log('Your Points: '+ userScore + 'Computer Points: '+ computerScore);
-        } else { 
-            console.log('No one gets a point');
-            console.log('Your Points: '+ userScore + 'Computer Points: '+ computerScore);
-        }
-    }
     console.log(playRound(playerSelection(),computerPlay()));
+    console.log(playRound(playerSelection(),computerPlay()));
+    console.log(playRound(playerSelection(),computerPlay()));
+    console.log(playRound(playerSelection(),computerPlay()));
+    console.log(playRound(playerSelection(),computerPlay()));
+    if (userScore > computerScore) {
+        console.log('You won by ' + (userScore - computerScore) + ' points!');
+    } else if (userScore < computerScore) {
+        console.log('You lost! Computer won by ' + (computerScore - userScore) + ' points!');
+    } else {
+        console.log('It was a tie!');
+    }
     } 
 
        
