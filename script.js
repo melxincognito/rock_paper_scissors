@@ -51,6 +51,7 @@ function playRound(playerSelection, computerPlay) {
     } else {
         console.log('Something went wrong');
     }
+    
     return 'Your points: ' + userScore + ' Computers Points: ' + computerScore;
     
 }
@@ -75,14 +76,16 @@ function game() {
     }
     } 
 
-       
-
-
-   
-
-  
-
-
-
-
-
+    
+function vimel() {
+    for (let i = 0; i < 7; i++) {
+        console.log(playRound(playerSelection(),computerPlay()));
+    } 
+    if (userScore > computerScore) {
+        console.log('You won by ' + (userScore - computerScore) + ' points!');
+    } else if (userScore < computerScore) {
+        console.log('You lost! Computer won by ' + (computerScore - userScore) + ' points!');
+    } else {
+        console.log('It was a tie!');
+    }
+}
