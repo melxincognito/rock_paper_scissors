@@ -1,0 +1,31 @@
+body {
+    background-color: lightcoral;
+}
+h1 {
+    color: brown;
+    font-family: lobster;
+    font-size: 60px;
+    text-align: center; 
+    width: 800px;
+    border: 13px double white;
+    padding: 50px;
+    margin: auto;
+}
+h2 { 
+    color: brown;
+    font-family: lobster;
+    text-align: center;
+    width: 900px;
+    border: 13px double white;
+    margin: 10px auto;
+
+}
+button {
+    padding: 30px;
+    background-color: rgb(255, 230, 177);
+    border-color: white;
+    font-family: lobster;
+    font-size: 20px;
+
+}
+
