@@ -94,11 +94,9 @@ const scissors = document.getElementById('scissors');
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 
-
-
-
-
 rock.addEventListener('click', () => weaponChoice('rock'));
+paper.addEventListener('click', () => weaponChoice('paper'));
+scissors.addEventListener('click', () => weaponChoice('scissors'));
 
 function weaponChoice(playerSelection) {
     console.log(playRound(playerSelection, computerPlay()))
@@ -106,13 +104,6 @@ function weaponChoice(playerSelection) {
 }
 
 
-paper.addEventListener('click', () => {
-    alert('you picked paper')
-})
-
-scissors.addEventListener('click', () => {
-    alert('you picked scissors');
-});
 
 
 
