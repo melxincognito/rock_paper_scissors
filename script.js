@@ -13,10 +13,10 @@ function computerPlay() {
     return computerPlay; 
 }
 /* function for a player to be prompted for their selection*/ 
-function playerSelection() {
-    const playerSelection = prompt('Rock, paper or scissors?').toLowerCase();
-    return playerSelection; 
-}
+//function playerSelection() {
+//    const playerSelection = prompt('Rock, paper or scissors?').toLowerCase();
+//    return playerSelection; 
+//}
 
 /*initialize userScore and computerScore before the function*/
 let userScore = 0;
@@ -61,10 +61,6 @@ function playRound(playerSelection, computerPlay) {
 
 function game() { 
     console.log(playRound(playerSelection(),computerPlay()));
-    console.log(playRound(playerSelection(),computerPlay()));
-    console.log(playRound(playerSelection(),computerPlay()));
-    console.log(playRound(playerSelection(),computerPlay()));
-    console.log(playRound(playerSelection(),computerPlay()));
     /*console.log above and keep score tallied with each runthrough of playRound*/
     /*code below should compute who the winner or loser is and how many points they won by*/
     if (userScore > computerScore) {
@@ -89,3 +85,34 @@ function vimel() {
         console.log('It was a tie!');
     }
 }
+
+
+//function playerSelection {
+//    const playerSelection = ''
+
+//}
+
+
+const scissors = document.getElementById('scissors');
+const rock = document.getElementById('rock');
+const paper = document.getElementById('paper');
+
+
+rock.addEventListener('click', () => {
+    alert('holi putitata');
+});
+
+scissors.addEventListener('click', () => {
+    alert('jamime');
+});
+
+
+
+
+
+
+
+//function playerSelection() {
+//    const playerSelection = prompt('Rock, paper or scissors?').toLowerCase();
+//    return playerSelection;
+//

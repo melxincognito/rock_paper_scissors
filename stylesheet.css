@@ -26,6 +26,34 @@ button {
     border-color: white;
     font-family: lobster;
     font-size: 20px;
+    color: brown;
 
 }
 
+.selections {
+    display:flex;
+    justify-content: center;
+    
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    font-family: lobster;
+    font-size: 30px;
+    color: brown;
+    
+
+}
+
+.score {
+    color: rgb(104, 9, 104);
+    font-size: 25px;
+}
