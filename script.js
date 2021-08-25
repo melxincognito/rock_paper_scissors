@@ -87,10 +87,7 @@ function vimel() {
 }
 
 
-//function playerSelection {
-//    const playerSelection = ''
 
-//}
 
 
 const scissors = document.getElementById('scissors');
@@ -98,15 +95,24 @@ const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 
 
-rock.addEventListener('click', () => {
-    alert('holi putitata');
-});
+
+
+
+rock.addEventListener('click', () => weaponChoice('rock'));
+
+function weaponChoice(playerSelection) {
+    console.log(playRound(playerSelection, computerPlay()))
+
+}
+
+
+paper.addEventListener('click', () => {
+    alert('you picked paper')
+})
 
 scissors.addEventListener('click', () => {
-    alert('jamime');
+    alert('you picked scissors');
 });
-
-
 
 
 
