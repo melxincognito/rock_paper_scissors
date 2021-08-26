@@ -97,9 +97,20 @@ const compScore = document.getElementById('compScore')
 const moves = document.getElementById('moves')
 
 
-rock.addEventListener('click', () => weaponChoice('rock'));
-paper.addEventListener('click', () => weaponChoice('paper'));
-scissors.addEventListener('click', () => weaponChoice('scissors'));
+rock.addEventListener('click', function() {
+    weaponChoice('rock');
+    displayResults(userScore, computerScore);
+});
+
+paper.addEventListener('click', function() {
+     weaponChoice('paper');
+     displayResults(userScore, computerScore);
+});
+
+scissors.addEventListener('click', function() {
+     weaponChoice('scissors');
+     displayResults(userScore, computerScore)
+});
 
 
 
@@ -108,6 +119,10 @@ function weaponChoice(playerSelection) {
 
 }
 
+function displayResults(userScore, computerScore) {
+    playerScore.textContent = `You: ${userScore}`;
+    compScore.textContent = `Computer: ${computerScore}`;
+};
 
 
 function playRound2(playerSelection, computerPlay) {
@@ -139,10 +154,6 @@ function playRound2(playerSelection, computerPlay) {
         moves.textContent = 'Something went wrong'
     }
     
-    function displayResults(userScore, computerScore) {
-        playerScore.textContent = `You: ${userScore}`;
-        compScore.textContent = `Computer: ${computerScore}`;
-    };
     
     
 }
