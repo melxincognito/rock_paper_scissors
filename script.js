@@ -92,9 +92,10 @@ let computerScore = 0;
 const scissors = document.getElementById('scissors');
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
-const playerScore = document.getElementById('playerScore')
-const compScore = document.getElementById('compScore')
-const moves = document.getElementById('moves')
+const playerScore = document.getElementById('playerScore');
+const compScore = document.getElementById('compScore');
+const moves = document.getElementById('moves');
+const end = document.getElementById('ending');
 
 
 rock.addEventListener('click', function() {
@@ -115,7 +116,7 @@ scissors.addEventListener('click', function() {
 
 
 function weaponChoice(playerSelection) {
-    console.log(playRound2(playerSelection, computerPlay()))
+    game2(playerSelection, computerPlay());
 
 }
 
@@ -154,15 +155,25 @@ function playRound2(playerSelection, computerPlay) {
         moves.textContent = 'Something went wrong'
     }
     
-    
-    
 }
+
+
+function game2(playerSelection, computerPlay) { 
+    playRound2(playerSelection, computerPlay);
+    
+
+    /*console.log above and keep score tallied with each runthrough of playRound*/
+    /*code below should compute who the winner or loser is and how many points they won by*/
+    if (userScore > computerScore) {
+        end.textContent= `You won by ${userScore - computerScore} points!`;
+    } else if (userScore < computerScore) {
+        end.textContent = `You lost! Computer won by ${computerScore - userScore} points!`;
+    } else {
+        end.textContent = 'It was a tie!';
+    }
+} 
+
+
 
 /* trying to make one that'll keep score and go up to 5 games.*/
 
-
-
-//function playerSelection() {
-//    const playerSelection = prompt('Rock, paper or scissors?').toLowerCase();
-//    return playerSelection;
-//
