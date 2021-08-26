@@ -142,8 +142,8 @@ function playRound2(playerSelection, computerPlay) {
     function displayResults(userScore, computerScore) {
         playerScore.textContent = `You: ${userScore}`;
         compScore.textContent = `Computer: ${computerScore}`;
-    
     };
+    
     
 }
 

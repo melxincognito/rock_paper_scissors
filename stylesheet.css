@@ -45,7 +45,6 @@ button {
 
 .results {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     justify-content: center;
     align-items: center;
@@ -54,6 +53,10 @@ button {
     color: brown;
     
 
+}
+.points {
+    align-items: center;
+    justify-items: center;
 }
 
 .score {
