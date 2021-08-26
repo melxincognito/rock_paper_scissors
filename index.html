@@ -12,21 +12,24 @@
     <body>
         <h1> * rock * paper * scissors *</h1>
         <div class='selections'>
-                <button class="button" id="rock">✊🏽 rock</button>
-                <button class="button" id="paper">👋🏽 paper</button>
-                <button class="button" id="scissors">✌🏽 scissors</button>
+                <button class="button" id="rock" title='rock'>✊🏽 rock</button>
+                <button class="button" id="paper" title='paper'>👋🏽 paper</button>
+                <button class="button" id="scissors" title='scissors'>✌🏽 scissors</button>
         </div>
 
-        <div class='results'>
-            <div>
+        <div class='results' id='results'> 
+            <div class='moves'>
+                <p id='moves'> </p>
+            </div>
+            <div title='your points'>
                 You:
-                <span class="score">
+                <span class="score" id='playerScore'>
                     0
                 </span>
             </div>
-            <div>
+            <div title='computers points'>
                 Computer: 
-                <span class="score">
+                <span class="score" id='compScore'>
                     0
                 </span>
             </div>
