@@ -30,6 +30,19 @@ button {
 
 }
 
+.reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#resetGame {
+    background-color: rgb(73, 3, 73);
+    color: rgb(255, 230, 177)
+
+}
+
 .selections {
     display: flex;
     justify-content: center;

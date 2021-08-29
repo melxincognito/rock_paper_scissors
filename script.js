@@ -42,6 +42,7 @@ const compScore = document.getElementById('compScore');
 const moves = document.getElementById('moves');
 const end = document.getElementById('ending');
 const winner = document.getElementById('winner');
+const resetGameBtn = document.getElementById('resetGame');
 
 
 rock.addEventListener('click', function() {
@@ -59,14 +60,17 @@ scissors.addEventListener('click', function() {
      displayResults(userScore, computerScore)
 });
 
-
+resetGameBtn.addEventListener('click', function() {
+    resetGame();
+});
+ 
 // game 
 
 function rpsGame(playerSelection, computerPlay) {
 
     if(gameOver()){
-        points(userScore, computerScore)
-        return
+        return points(userScore, computerScore)
+        
     }
 
     playRound2(playerSelection, computerPlay);
@@ -130,6 +134,11 @@ function gameOver() {
     return userScore === 5 || computerScore === 5
 }
 
+
+function resetGame() {
+    window.location.reload();
+
+}
 
 
 
