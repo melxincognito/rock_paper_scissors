@@ -22,7 +22,7 @@ h2 {
 }
 button {
     padding: 30px;
-    background-color: rgb(255, 230, 177);
+    background-color: rgb(255, 230, 230);
     border-color: white;
     font-family: lobster;
     font-size: 20px;
@@ -38,8 +38,8 @@ button {
 }
 
 #resetGame {
-    background-color: rgb(73, 3, 73);
-    color: rgb(255, 230, 177)
+    background-color: rgb(255, 230, 230);
+    color:  rgb(73, 3, 73)
 
 }
 
